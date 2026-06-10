@@ -51,3 +51,16 @@ Explanation:
 =================================================
 
 """
+
+def isPalindrome(word):
+    return word == word[::-1]
+
+
+with open("file_reading_practice/sowpods.txt", "r") as file:
+    print("Palindrome words:")
+
+    for word in file:
+        word = word.strip().lower()
+
+        if isPalindrome(word):
+            print(word)
